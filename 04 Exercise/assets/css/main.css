@@ -1,0 +1,13 @@
+.box {
+  width: 100px;
+  height: 300px;
+  background-color: crimson;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center !important;
+  gap: 20px;
+}
