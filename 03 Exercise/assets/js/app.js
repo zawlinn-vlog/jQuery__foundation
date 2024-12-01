@@ -27,11 +27,22 @@ $(() => {
 
   $("#age").keydown(function () {
     count++;
-    console.log(`Age Working by keydown - ${count < 10 ? "0" + count : count}`);
+    console.log(
+      `Age Working by keydown - ${count < 10 ? "0" + count : count}`,
+      this.value
+    );
   });
 
   $("#nrc-symbol").keyup(function () {
     count++;
-    console.log(`Age Working by keydown - ${count < 10 ? "0" + count : count}`);
+    console.log(
+      `Age Working by keydown - ${count < 10 ? "0" + count : count}`,
+      this.value
+    );
+  });
+
+  $("form").submit(function (e) {
+    console.log("form submitted");
+    e.preventDefault();
   });
 });
