@@ -37,4 +37,8 @@ $(function () {
   $("#toggleClass").click(function () {
     $("p").toggleClass("text-primary");
   });
+
+  $("#cloneBtn").click(function () {
+    $(".targetEl").clone().appendTo($(".clone"));
+  });
 });
