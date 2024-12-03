@@ -1,0 +1,28 @@
+{
+  "name": "08-exercise",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "sass ./assets/scss/main.scss ./assets/css/main.css --no-source-map -w",
+    "compressed": "sass ./assets/scss/main.scss ./assets/css/main.min.css --no-source-map --style=compressed",
+    "prefixer": "postcss ./assets/css/main.css -o ./assets/css/main.prefix.css --use autoprefixer",
+    "devServer": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "browserslist": "cover 99.5%",
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "bootstrap": "^5.3.3",
+    "concat": "^1.0.3",
+    "jquery": "^3.7.1",
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.81.0"
+  }
+}
