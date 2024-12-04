@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <script defer src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script defer src="./assets/js/app.js"></script>
+  </head>
+  <body>
+    <div class="container py-5">
+      <div class="row gap-2">
+        <div class="bg-primary box"></div>
+        <div class="bg-warning box"></div>
+        <div class="bg-danger box"></div>
+        <div class="bg-success box"></div>
+      </div>
+
+      <div class="btn-group mt-4">
+        <button class="btn btn-primary is">is Button</button>
+        <button class="btn btn-danger not">not Button</button>
+        <button class="btn btn-danger even">even Button</button>
+        <button class="btn btn-warning hide">hide button</button>
+      </div>
+    </div>
+  </body>
+</html>
