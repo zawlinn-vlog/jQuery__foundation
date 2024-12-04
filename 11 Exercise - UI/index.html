@@ -9,6 +9,11 @@
       href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
 
+    <link
+      rel="stylesheet"
+      href="./node_modules/jquery-ui/themes/base/all.css"
+    />
+
     <script defer src="./assets/js/app.js"></script>
   </head>
   <body>
@@ -21,15 +26,130 @@
         <div class="box text-bg-danger">Box 05</div>
         <div class="box text-bg-warning">Box 06</div>
         <div class="box text-bg-dark">Box 07</div>
-        <!-- <div class="box text-bg-muted">Box 08</div>
-        <div class="box text-bg-primary">Box 09</div>
-        <div class="box text-bg-primary">Box 10</div> -->
       </div>
       <div class="btn-group mt-4">
         <button class="btn btn-primary shake">- Shake</button>
         <button class="btn btn-secondary bounce">- Bounce</button>
         <button class="btn btn-success blind">- Blind</button>
         <button class="btn btn-info clip">- clip</button>
+      </div>
+
+      <!-- Auto Complete -->
+
+      <div class="row mt-5">
+        <div class="col-6 offset-3 p-4 bg-light">
+          <form action="" class="form">
+            <div class="form-group">
+              <label for="job" class="form-label">Job Title:</label>
+              <input type="text" name="job" id="job" class="form-control" />
+            </div>
+            <div class="d-grid mt-3">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- ACCORDION -->
+      <div class="row my-5">
+        <div class="col-6 offset-3">
+          <div class="myaccordion">
+            <h2>Heading 01</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
+              illum, libero neque praesentium soluta provident ipsam
+              necessitatibus recusandae, dolore quaerat a voluptates quam
+              debitis, aliquam veritatis odio voluptatem totam natus?
+            </p>
+            <h2>Heading 02</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
+              illum, libero neque praesentium soluta provident ipsam
+              necessitatibus recusandae, dolore quaerat a voluptates quam
+              debitis, aliquam veritatis odio voluptatem totam natus?
+            </p>
+            <h2>Heading 03</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
+              illum, libero neque praesentium soluta provident ipsam
+              necessitatibus recusandae, dolore quaerat a voluptates quam
+              debitis, aliquam veritatis odio voluptatem totam natus?
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TABs -->
+      <div class="row">
+        <div class="col-6 offset-3">
+          <div class="myTab">
+            <ul>
+              <li>
+                <a href="#tab1">Summary</a>
+              </li>
+              <li>
+                <a href="#tab2">About</a>
+              </li>
+              <li>
+                <a href="#tab3"> Detail info </a>
+              </li>
+            </ul>
+
+            <div id="tab1">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+                illum nobis ipsa laborum iste voluptatibus odio totam, suscipit
+                itaque aliquam tempora tempore atque temporibus minus? Unde
+                nihil ex voluptatem voluptates, est vero maiores quos quod
+                consequuntur repellat. Ea, similique asperiores!
+              </p>
+              <ul>
+                <li>Question 01</li>
+                <li>Question 02</li>
+                <li>Question 03</li>
+              </ul>
+            </div>
+            <div id="tab2">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+                illum nobis ipsa laborum iste voluptatibus odio totam, suscipit
+                itaque aliquam tempora tempore atque temporibus minus? Unde
+                nihil ex voluptatem voluptates, est vero maiores quos quod
+                consequuntur repellat. Ea, similique asperiores!
+              </p>
+              <ul>
+                <li>Job Caption 01</li>
+                <li>Job Caption 02</li>
+                <li>Job Caption 03</li>
+                <li>Job Caption 04</li>
+              </ul>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere
+                iste esse, exercitationem nemo rem, omnis quos optio quae dolor
+                suscipit, eaque deleniti corporis totam debitis non! Veritatis,
+                possimus quidem. Aliquid officia magnam dolorum accusantium
+                beatae nihil iste asperiores eaque officiis dolores? Deserunt ad
+                excepturi eos officiis provident in adipisci repudiandae!
+              </p>
+            </div>
+            <div id="tab3">
+              <ul>
+                <li>This is Lesson 01</li>
+                <li>This is Lesson 02</li>
+                <li>This is Lesson 03</li>
+                <li>This is Lesson 04</li>
+                <li>This is Lesson 05</li>
+              </ul>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+                illum nobis ipsa laborum iste voluptatibus odio totam, suscipit
+                itaque aliquam tempora tempore atque temporibus minus? Unde
+                nihil ex voluptatem voluptates, est vero maiores quos quod
+                consequuntur repellat. Ea, similique asperiores!
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>

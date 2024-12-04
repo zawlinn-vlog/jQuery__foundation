@@ -26,10 +26,6 @@ $("document").ready(function () {
     - size
     -
 
-
-
-
-
     */
     $(".text-bg-primary").effect(
       "shake",
@@ -67,4 +63,33 @@ $("document").ready(function () {
   $(".clip").click(function () {
     $(".text-bg-info").effect("clip", 2000);
   });
+  let position = [
+    "CEO",
+    "General Manager",
+    "Manager",
+    "Vice Manager",
+    "Supervisor",
+    "CFO",
+    "Finance Manager",
+    "Senior Account",
+    "Accountant",
+  ];
+
+  $("#job").autocomplete({
+    source: position,
+  });
+
+  $("form").submit(function (e) {
+    e.preventDefault();
+    let getJob = $("#job").val();
+    window.alert(`My Job Position is ${getJob}`);
+  });
+
+  // ACCORDION
+
+  $(".myaccordion").accordion();
+
+  // TABs
+
+  $(".myTab").tabs();
 });
