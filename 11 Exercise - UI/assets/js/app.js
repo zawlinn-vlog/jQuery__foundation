@@ -92,4 +92,40 @@ $("document").ready(function () {
   // TABs
 
   $(".myTab").tabs();
+
+  // PROGRESS BARs
+
+  $(".progress").progressbar({
+    value: 40,
+  });
+
+  $(".progress").children().css({
+    backgroundColor: "blue",
+  });
+
+  $(".myBtn").button();
+
+  $(".myBtn-1").button({
+    disabled: true,
+  });
+
+  $(".myBtn-2").button({
+    icon: "ui-icon-flag",
+  });
+
+  $(".myBtn-3").button({
+    icon: "ui-icon-star",
+    iconPosition: "end",
+    label: "Loading",
+
+    showLabel: false,
+  });
+
+  $("#slider").slider({
+    slide: function (e, val) {
+      console.log(val.value);
+
+      $("#loan").val(val.value);
+    },
+  });
 });
