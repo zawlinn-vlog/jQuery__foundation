@@ -121,11 +121,45 @@ $("document").ready(function () {
     showLabel: false,
   });
 
-  $("#slider").slider({
-    slide: function (e, val) {
-      console.log(val.value);
+  $("#slider")
+    .slider({
+      slide: function (e, val) {
+        // console.log(val.value);
 
-      $("#loan").val(val.value);
-    },
-  });
+        $("#loan").val(val.value);
+      },
+      min: 10,
+      max: 200,
+      // value: 50,
+      step: 20,
+      // orientation: "vertical",
+
+      change: function (e, val) {
+        console.log("This is change", val.value);
+      },
+      start: function (e, val) {
+        console.log("This is start", val.value);
+      },
+      stop: function (e, val) {
+        console.log("This is stop", val.value);
+      },
+    })
+    .css("background-color", "tomato");
+
+  $("#slider").children("span").css("background-color", "purple");
+
+  $("#term")
+    .css({
+      backgroundColor: "tomato",
+    })
+    .slider({
+      slide: function (e, val) {
+        $("#days").val(`From ${val.values[0]} Days to ${val.values[1]} Days`);
+      },
+      min: 7,
+      max: 30,
+      step: 1,
+      range: true,
+      values: [10, 20],
+    });
 });
