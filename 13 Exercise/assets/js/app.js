@@ -13,6 +13,21 @@ $(document).ready(function () {
       },
     });
 
+  // $("form").controlgroup();
+
+  $("#dob").datepicker({
+    changeMonth: true,
+    changeYear: true,
+  });
+
+  // $("input").checkboxradio({
+  //   // disabled: true,
+  // });
+
+  // $("button").button({
+  //   icon: "ui-icon-caret-2-e-w",
+  // });
+
   // param
 
   /*
