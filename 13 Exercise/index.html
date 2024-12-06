@@ -49,11 +49,27 @@
       </div>
 
       <div class="row">
-        <div class="col-12 col-md-6 offset-3">
+        <div class="col-12 col-md-6 offset-3 row gap-2">
           <div class="form-group">
             <lable class="form-label" for="dob">Date of Birth</lable>
             <input type="text" name="" id="dob" class="form-control" />
           </div>
+
+          <div class="form-group">
+            <label for="startBooking" class="from-label"
+              >Booking Start Date:
+            </label>
+            <input type="text" class="form-control" id="startBooking" />
+          </div>
+          <div class="form-group">
+            <label for="endBooking" class="from-label"
+              >Booking End Date:
+            </label>
+            <input type="text" class="form-control" id="endBooking" />
+          </div>
+          <button type="submit" class="btn btn-primary mt-2 submit">
+            Get Data
+          </button>
         </div>
       </div>
     </div>
