@@ -104,6 +104,12 @@ $(document).ready(function () {
     formObj.favProgramming = $("#favlan").val();
     formObj.gender = $(":radio").val();
     formObj.currentCountry = $("#country").val();
+    // formObj.img = $("#upload").src;
+
+    var tmppath = URL.createObjectURL(event.target.files[0]);
+
+    console.log(tmppath);
+
     console.log(formObj);
   });
 });
