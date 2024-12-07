@@ -1,5 +1,17 @@
 "use strict";
 
+const proList = [
+  "HyperText Markup Language (HTML)",
+  "Cascading Stylesheet (CSS)",
+  "JavaScript (JS)",
+  "jQuery",
+  "Hypertext Preprocessor (PHP)",
+  "mySQL",
+  "React JS",
+];
+
+let formObj = {};
+
 $(document).ready(function () {
   $("input").addClass("shadow-none");
 
@@ -65,5 +77,33 @@ $(document).ready(function () {
     showAnim: "slideDown",
     changeMonth: true,
     changeYear: true,
+  });
+
+  //
+
+  const phReg = /^09([0-9]{3}){2}/;
+
+  $("#phone").on("keyup", function () {
+    if (checkReg(phReg, this.value)) success(this);
+    else denied(this);
+  });
+
+  $("#favlan").autocomplete({
+    source: proList,
+  });
+
+  $(":submit").on("click", function (e) {
+    e.preventDefault();
+
+    formObj.firstName = $("#fname").val();
+    formObj.lastName = $("#lname").val();
+    formObj.password = $("#pass").val();
+    formObj.email = $("#email").val();
+    formObj.birthDate = $("#dob").val();
+    formObj.phoneNumber = $("#phone").val();
+    formObj.favProgramming = $("#favlan").val();
+    formObj.gender = $(":radio").val();
+    formObj.currentCountry = $("#country").val();
+    console.log(formObj);
   });
 });
