@@ -1,15 +1,23 @@
 "use strict";
 
 $(document).ready(function () {
+  const getEl = document.querySelector("#fontawesome");
   $("button").on("click", function () {
-    $("#fontawesome").select();
+    // getEl.select();
 
-    navigator.clipboard.writeText($("#fontawesome").val());
+    console.log(navigator);
 
+    try {
+      navigator.clipboard.writeText(getEl.value);
+    } catch (err) {
+      console.log(err.message);
+    }
     console.log(navigator.clipboard);
 
     $(this).text("Copied!");
   });
+
+  //
 });
 
 // $(document).ready(function () {

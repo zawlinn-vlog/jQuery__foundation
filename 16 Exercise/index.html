@@ -15,6 +15,11 @@
     />
 
     <script defer src="./assets/js/app.js"></script>
+    <style>
+      ::selection {
+        background-color: #ffd700;
+      }
+    </style>
   </head>
   <body>
     <div class="container py-5">
@@ -32,7 +37,7 @@
 
         <label for="" class="form-label">Fontawesome Link</label>
         <div class="row">
-          <div class="col">
+          <div class="col-12">
             <input
               type="text"
               name=""
@@ -45,6 +50,45 @@
             <button class="btn btn-primary">Copy Link</button>
           </div>
         </div>
+
+        <h4 class="text-primary">Summary lists &mdash;</h4>
+
+        <ul>
+          <li class="list-group-item">
+            <h4 id="btn-01">
+              <span class="icon">&#x25BA;</span>
+              <span>2019</span>
+            </h4>
+            <ul id="step-01">
+              <li class="list-group-item my-1">
+                Lorem ipsum dolor sit amet consectetur.
+              </li>
+              <li class="list-group-item my-1">
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+              </li>
+
+              <li class="list-group-item my-1">
+                <h5 id="btn-02">
+                  <span class="icon">&#x25BA;</span>
+                  <span>2022</span>
+                </h5>
+                <ul id="step-02">
+                  <li class="list-group-item my-1">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </li>
+                  <li class="list-group-item my-1">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Accusantium, unde!
+                  </li>
+                  <li class="list-group-item my-1">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Quidem.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
 
