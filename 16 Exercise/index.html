@@ -19,12 +19,18 @@
       ::selection {
         background-color: #ffd700;
       }
+
+      .rotate {
+        display: inline-block;
+        transform: rotate(90deg);
+      }
     </style>
   </head>
   <body>
     <div class="container py-5">
-      <div class="col">
-        <!-- <ul class="list-group">
+      <div class="row gap-3">
+        <div class="col-12">
+          <!-- <ul class="list-group">
           <li class="list-group-item">Items 01</li>
           <li class="list-group-item">Items 02</li>
           <li class="list-group-item">Items 03</li>
@@ -35,60 +41,89 @@
 
         <button class="btn btn-primary mt-3">Click Me</button> -->
 
-        <label for="" class="form-label">Fontawesome Link</label>
-        <div class="row">
-          <div class="col-12">
-            <input
-              type="text"
-              name=""
-              id="fontawesome"
-              class="form-control"
-              value="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-            />
+          <label for="" class="form-label">Fontawesome Link</label>
+          <div class="row">
+            <div class="col-12">
+              <input
+                type="text"
+                name=""
+                id="fontawesome"
+                class="form-control"
+                value="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+              />
+            </div>
+            <div class="col">
+              <button class="btn btn-primary" id="copy">Copy Link</button>
+            </div>
           </div>
-          <div class="col">
-            <button class="btn btn-primary">Copy Link</button>
+
+          <h4 class="text-primary mt-4">Summary lists &mdash;</h4>
+
+          <ul>
+            <li class="list-group-item">
+              <h4 id="btn-01">
+                <span class="icon">&#x25BA;</span>
+                <span>2019</span>
+              </h4>
+              <ul id="step-01">
+                <li class="list-group-item my-1">
+                  Lorem ipsum dolor sit amet consectetur.
+                </li>
+                <li class="list-group-item my-1">
+                  Lorem ipsum dolor sit amet consectetur adipisicing.
+                </li>
+
+                <li class="list-group-item my-1">
+                  <h5 id="btn-02">
+                    <span class="icon">&#x25BA;</span>
+                    <span>2022</span>
+                  </h5>
+                  <ul id="step-02">
+                    <li class="list-group-item my-1">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </li>
+                    <li class="list-group-item my-1">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Accusantium, unde!
+                    </li>
+                    <li class="list-group-item my-1">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Quidem.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-12">
+          <div class="col-12 col-md-8 offset-md-2">
+            <h3 class="text-primary mb-5">Add Multiple Phone Number</h3>
+            <form action="" id="addPhone">
+              <div class="form-group">
+                <div class="row">
+                  <div class="col">
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      class="form-control"
+                      placeholder="09 xxx xxx xxx"
+                    />
+                  </div>
+                  <div class="col">
+                    <button class="btn btn-primary" id="btn-add" type="button">
+                      Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
 
-        <h4 class="text-primary">Summary lists &mdash;</h4>
-
-        <ul>
-          <li class="list-group-item">
-            <h4 id="btn-01">
-              <span class="icon">&#x25BA;</span>
-              <span>2019</span>
-            </h4>
-            <ul id="step-01">
-              <li class="list-group-item my-1">
-                Lorem ipsum dolor sit amet consectetur.
-              </li>
-              <li class="list-group-item my-1">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </li>
-
-              <li class="list-group-item my-1">
-                <h5 id="btn-02">
-                  <span class="icon">&#x25BA;</span>
-                  <span>2022</span>
-                </h5>
-                <ul id="step-02">
-                  <li class="list-group-item my-1">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  </li>
-                  <li class="list-group-item my-1">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Accusantium, unde!
-                  </li>
-                  <li class="list-group-item my-1">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Quidem.
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
+        <div class="col-12"></div>
       </div>
     </div>
 
