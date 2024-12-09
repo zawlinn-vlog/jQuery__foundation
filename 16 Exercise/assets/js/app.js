@@ -124,53 +124,102 @@ $(document).ready(function () {
     comObj = {},
     getData;
 
-  $("#submit").click(function (e) {
-    e.preventDefault();
-    comObj.email = $("#email").val();
-    comObj.phone = $("#phone").val();
-    comObj.comment = $("#comment").val();
-
-    arr.push(comObj);
-
-    localStorage.setItem("comments", JSON.stringify(arr));
-
-    getData = JSON.parse(localStorage.getItem("comments"));
-
-    console.log(getData, Boolean(getData));
-
-    // if (localStorage.getItem("comments")) {
-    //   console.log("has data");
-
-    // } else {
-    //   console.log("has not data");
-    //   localStorage.setItem("comments", JSON.stringify(arr));
-    // }
-
-    console.log(comObj, arr);
-  });
-
-  //
-
-  getData = JSON.parse(localStorage.getItem("comments"));
-
-  const tBody = document.querySelector(".mainContent");
-
-  getData.forEach((val, int) => {
-    const table = `
-      
+  const displayData = function (data) {
+    document.querySelector(".mainContent").textContent = "";
+    data.reverse().forEach((val, int) => {
+      const html = `
                 <tr>
                   <th>${int + 1}</th>
                   <th>${val.email}</th>
                   <th>${val.phone}</th>
                   <th>${val.comment}</th>
                 </tr>
-      
-      `;
+          `;
 
-    console.log(table);
+      document
+        .querySelector(".mainContent")
+        .insertAdjacentHTML("beforeend", html);
+    });
+  };
 
-    tBody.insertAdjacentHTML("beforeend", table);
+  function resetAll() {
+    $("#email").val("");
+    $("#phone").val("");
+    $("#comment").val("");
+  }
+
+  $("#submit").click(function (e) {
+    e.preventDefault();
+
+    if (
+      $("#email").val() !== "" &&
+      $("#phone").val() !== "" &&
+      $("#comment").val() !== ""
+    ) {
+      comObj.email = $("#email").val();
+      comObj.phone = $("#phone").val();
+      comObj.comment = $("#comment").val();
+
+      getData = localStorage.getItem("comments");
+
+      console.log(getData);
+
+      if (!getData) {
+        arr.push(comObj);
+
+        localStorage.setItem("comments", JSON.stringify(arr));
+
+        getData = JSON.parse(localStorage.getItem("comments"));
+      } else {
+        getData = JSON.parse(localStorage.getItem("comments"));
+
+        getData.push(comObj);
+
+        localStorage.setItem("comments", JSON.stringify(getData));
+      }
+
+      displayData(getData);
+
+      resetAll();
+    } else {
+      alert("Please Insert value");
+    }
   });
+
+  // TRY CATCH
+
+  try {
+    const getData = JSON.parse(localStorage.getItem("comments"));
+
+    getData && displayData(getData);
+  } catch (err) {
+    console.log(err.message);
+  } finally {
+    console.log("DATA Loading is Finished");
+  }
+
+  //
+
+  // getData = JSON.parse(localStorage.getItem("comments"));
+
+  // const tBody = document.querySelector(".mainContent");
+
+  // getData.forEach((val, int) => {
+  //   const table = `
+
+  // <tr>
+  //   <th>${int + 1}</th>
+  //   <th>${val.email}</th>
+  //   <th>${val.phone}</th>
+  //   <th>${val.comment}</th>
+  // </tr>
+
+  //     `;
+
+  //   console.log(table);
+
+  //   tBody.insertAdjacentHTML("beforeend", table);
+  // });
 });
 
 // $(document).ready(function () {
