@@ -64,7 +64,7 @@ $(document).ready(function () {
 
   // EMAIL
 
-  const emailReg = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+  const emailReg = /^[\w-]+@([\w-]+\.)+[\w-]{2,4}$/;
 
   $("#email").on("keyup", function () {
     if (checkReg(emailReg, this.value)) success(this);
@@ -88,6 +88,7 @@ $(document).ready(function () {
     else denied(this);
   });
 
+  //
   $("#favlan").autocomplete({
     source: proList,
   });

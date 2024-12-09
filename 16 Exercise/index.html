@@ -124,7 +124,7 @@
         </div>
 
         <div class="col-12 my-4">
-          <div class="col-4 bg-light p-5 rounded">
+          <div class="col-12 col-xl-4 col-lg-6 bg-light p-5 rounded mb-md-4">
             <h3 class="text-primary mb-5">This is Comment Box</h3>
             <form action="" class="row gap-3">
               <div class="form-group">
@@ -133,7 +133,7 @@
                   type="email"
                   name=""
                   id="email"
-                  class="form-control"
+                  class="form-control shadow-none"
                   placeholder="Email Address"
                 />
               </div>
@@ -143,28 +143,42 @@
                   type="text"
                   name=""
                   id="phone"
-                  class="form-control"
+                  class="form-control shadow-none"
                   placeholder="09 xxx xxx xxx"
                   disabled
                 />
               </div>
 
               <div class="form-group">
-                <label for="" class="form-label" id="comment">Comment</label>
+                <label for="" class="form-label">Comment</label>
                 <textarea
                   name=""
-                  id=""
+                  id="comment"
                   class="form-control"
+                  spellcheck="false"
                   disabled
                 ></textarea>
                 <span class="caption mt-3 d-inline-block"
-                  >0/100 Character is left</span
+                  >0/ 100 Character is left</span
                 >
               </div>
               <div class="d-grid mt-4">
-                <button class="btn btn-primary">Submit</button>
+                <button class="btn btn-primary" id="submit">Submit</button>
               </div>
             </form>
+          </div>
+          <div class="col-12 col-xl-4 col-lg-6">
+            <table class="table table-primary">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Comments</th>
+                </tr>
+              </thead>
+              <tbody class="mainContent"></tbody>
+            </table>
           </div>
         </div>
       </div>
