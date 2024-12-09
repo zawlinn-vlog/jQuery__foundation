@@ -123,16 +123,59 @@
           </div>
         </div>
 
-        <div class="col-12"></div>
+        <div class="col-12 my-4">
+          <div class="col-4 bg-light p-5 rounded">
+            <h3 class="text-primary mb-5">This is Comment Box</h3>
+            <form action="" class="row gap-3">
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  name=""
+                  id="email"
+                  class="form-control"
+                  placeholder="Email Address"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Phone Number</label>
+                <input
+                  type="text"
+                  name=""
+                  id="phone"
+                  class="form-control"
+                  placeholder="09 xxx xxx xxx"
+                  disabled
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="" class="form-label" id="comment">Comment</label>
+                <textarea
+                  name=""
+                  id=""
+                  class="form-control"
+                  disabled
+                ></textarea>
+                <span class="caption mt-3 d-inline-block"
+                  >0/100 Character is left</span
+                >
+              </div>
+              <div class="d-grid mt-4">
+                <button class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
 
-    <pre>
+    <!-- <pre>
       &lt;?php echo 'hello world'; ?&gt;
 
       console.log('hello World!')
       </pre
-    >
+    > -->
 
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./node_modules/jquery-ui/dist/jquery-ui.min.js"></script>
